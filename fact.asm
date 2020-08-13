@@ -46,12 +46,12 @@ factorial:
 	sw $ra, 4($sp)
 	sw $a0, 0($sp)
 	slti $t0,$a0,1
-	beq $t0,$0,Else
+	beq $t0,$0,else
 	addi $v0,$0,1
 	addi $sp,$sp,8
 	jr $ra
 	
-Else:
+else:
 	addi $a0, $a0, -1
 	jal factorial
 	lw $ra,4($sp)
